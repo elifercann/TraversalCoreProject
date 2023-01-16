@@ -1,0 +1,87 @@
+﻿@model List<Reservation>
+@{
+    ViewData["Title"] = "MyApprovalReservation";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+<div class="card mb-4">
+    <div class="card-header pb-0">
+        <h6>Onay Bekleyen Rezervasyonlar</h6>
+    </div>
+    <div class="card-body px-0 pt-0 pb-2">
+        <div class="table-responsive p-0">
+            @if (!Model.Any())
+            {
+            <div class="container">
+                <span>Onay bekleyen rezervasyon bulunmamaktadır.</span>
+            </div>
+               
+            }
+            else
+            {
+                <table class="table align-items-center mb-0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Lokasyon</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Kişi Sayısı</th>
+                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Rezervasyon Tarihi</th>
+                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Durum</th>
+                            <th class="text-secondary opacity-7"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">@item.ReservationId</h6>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">@item.Destination.City</h6>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-xs font-weight-bold mb-0">@item.PersonCount</p>
+                                    @*<p class="text-xs text-secondary mb-0">Organization</p>*@
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-secondary text-xs font-weight-bold">@item.ReservationDate</span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs font-weight-bold">@item.Status</span>
+                                </td>
+                                @*<td class="align-middle">
+                                <a href="#" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                    Detaylar
+                                </a>
+                            </td>*@
+
+                            </tr>
+
+                        }
+
+
+
+                    </tbody>
+                </table>
+            }
+
+        </div>
+    </div>
+</div>
+

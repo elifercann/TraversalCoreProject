@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
@@ -15,6 +16,13 @@ namespace TraversalCoreProject.Areas.Member.Controllers
     {
         DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());
         ReservationManager reservationManager = new ReservationManager(new EfReservationDal());
+        private readonly UserManager<AppUser> _userManager;
+
+        public ReservationController(UserManager<AppUser> userManager)
+        {
+            _userManager = userManager;
+        }
+
         [HttpGet]
         public IActionResult NewReservation()
         {
@@ -30,17 +38,28 @@ namespace TraversalCoreProject.Areas.Member.Controllers
         [HttpPost]
         public IActionResult NewReservation(Reservation reservation)
         {
-            reservation.AppUserId = 3;
+            reservation.AppUserId = 4;
+            reservation.Status = "Onay bekliyor";
             reservationManager.TAdd(reservation);
             return RedirectToAction("MyCurrentReservation");
         }
-        public IActionResult MyCurrentReservation()
+        public async Task<IActionResult> MyApprovalReservation()
         {
-            return View();
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var valuesList = reservationManager.GetListWithReservationByWaitApproval(values.Id);
+            return View(valuesList);
         }
-        public IActionResult MyOldReservation()
+        public async Task<IActionResult> MyCurrentReservation()
         {
-            return View();
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var valuesList = reservationManager.GetListWithReservationByAccepted(values.Id);
+            return View(valuesList);
+        }
+        public async Task<IActionResult> MyOldReservation()
+        {
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var valuesList = reservationManager.GetListWithReservationByPast(values.Id);
+            return View(valuesList);
         }
     }
 }
