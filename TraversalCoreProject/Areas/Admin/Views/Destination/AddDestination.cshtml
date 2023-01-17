@@ -1,0 +1,120 @@
+﻿@model Destination
+@{
+    ViewData["Title"] = "AddDestination";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+   
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Yeni Rota Oluşturma Sayfası</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Şehir</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" asp-for="City" id="basic-default-name" placeholder="Şehir ismi giriniz" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-company">Gün Gece</label>
+                        <div class="col-sm-10">
+                            <input type="text"
+                                   asp-for="DayNight"
+                                   class="form-control"
+                                   id="basic-default-company"
+                                   placeholder="Gün gece bilgisini giriniz" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-email">Fiyat</label>
+                        <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                                <input type="text"
+                                       asp-for="Price"
+                                       id="basic-default-email"
+                                       class="form-control"
+                                       placeholder="Fiyat bilgisini giriniz" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-email">Kapasite</label>
+                        <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                                <input type="text"
+                                       asp-for="Capactiy"
+                                       id="basic-default-email"
+                                       class="form-control"
+                                       placeholder="Kapasite bilgisini giriniz" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-phone">Ana Görsel</label>
+                        <div class="col-sm-10">
+                            <input type="file"
+                                   asp-for="Image"
+                                   id="basic-default-phone"
+                                   class="form-control phone-mask"
+                                   placeholder="Şehrin ana görselini ekleyin" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-phone">Kapak Görseli</label>
+                        <div class="col-sm-10">
+                            <input type="file"
+                                   asp-for="CoverImage"
+                                   id="basic-default-phone"
+                                   class="form-control phone-mask"
+                                   placeholder="Şehrin kapak görselini ekleyin" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-phone">Ek Görseli</label>
+                        <div class="col-sm-10">
+                            <input type="file"
+                                   asp-for="Image2"
+                                   id="basic-default-phone"
+                                   class="form-control phone-mask"
+                                   placeholder="Eklemek istediğiniz görselini ekleyin" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-message">Detay</label>
+                        <div class="col-sm-10">
+                            <textarea id="basic-default-message"
+                                       cols="30"
+                                      rows="4"
+                                      asp-for="Detail1"
+                                      class="form-control"
+                                      placeholder="Şehrin detayını ekleyin"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-message">Ek Detay</label>
+                        <div class="col-sm-10">
+                            <textarea id="basic-default-message"
+                                      cols="30"
+                                      rows="4"
+                                      asp-for="Detail2"
+                                      class="form-control"
+                                      placeholder="Varsa şehrin ek detayını ekleyin"></textarea>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Oluştur</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+

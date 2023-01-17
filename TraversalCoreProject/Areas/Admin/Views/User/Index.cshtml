@@ -1,0 +1,54 @@
+﻿@model List<AppUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int sayac = 0;
+}
+
+
+<div class="card">
+    <h5 class="card-header">Kullanıcı Listesi</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Ad Soyad</th>     
+                    <th>Kullanıcı Adı</th>
+                    <th>Mail</th>
+                  
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var item in Model)
+                {
+
+
+                <tr>
+                    @{ sayac = sayac + 1;}
+                    <td>@sayac</td>
+                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@item.Name @item.Surname</strong></td>
+
+                    <td>@item.UserName</td>
+                    <td>
+                        @item.Email
+                    </td>
+                    <td><a class="badge bg-label-primary me-1" href="/Admin/User/UpdateUser/@item.Id"><i class="bx bx-edit-alt me-1"></i> Güncelle</a></td>
+                    <td><a class="badge bg-label-primary me-1" href="/Admin/User/DeleteUser/@item.Id"><i class="bx bx-refresh"></i> Sil</a></td>
+                    <td><a class="badge bg-label-primary me-1" href="/Admin/User/CommentUser/@item.Id"><i class="bx bx-comment-detail"></i> Yorumlar</a></td>
+                    <td><a class="badge bg-label-primary me-1" href="/Admin/User/ReservationUser/@item.Id"><i class="bx bx-navigation"></i> Tur Geçmişi</a></td>
+                    
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    <br />
+    <a class="btn btn-primary" href="/Admin/User/AddUser/">Yeni Kullanıcı Ekle</a>
+
+</div>
+
+
+
