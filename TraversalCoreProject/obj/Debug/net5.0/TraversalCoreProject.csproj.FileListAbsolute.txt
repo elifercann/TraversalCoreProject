@@ -218,4 +218,4 @@ C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\
 C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Views\Shared\Components\_Cards1Statistic\DEfault.cshtml.g.cs
 C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Comment\Index.cshtml.g.cs
 C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
-C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\AddUser.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\ReservationUser.cshtml.g.cs
