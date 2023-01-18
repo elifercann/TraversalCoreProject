@@ -1,0 +1,89 @@
+﻿@model Guide
+@{
+    ViewData["Title"] = "AddGuide";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Yeni Rehber Oluşturma Sayfası</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Ad Soyad</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" asp-for="Name" id="basic-default-name" placeholder="Rehberin ad soyad bilgisini giriniz" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-company">Görsel</label>
+                        <div class="col-sm-10">
+                            <input type="file"
+                                   asp-for="Image"
+                                   class="form-control"
+                                   id="basic-default-company"
+                                   placeholder="Rehberin görselini ekleyebilirsiniz" />
+                            <span asp-validation-for="Image" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-email">Instagram</label>
+                        <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                                <input type="text"
+                                       asp-for="InstagramUrl"
+                                       id="basic-default-email"
+                                       class="form-control"
+                                       placeholder="Instagram url bilgisini ekleyebilirsiniz" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-email">Twitter</label>
+                        <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                                <input type="text"
+                                       asp-for="TwtterUrl"
+                                       id="basic-default-email"
+                                       class="form-control"
+                                       placeholder="Twitter url bilgisini ekleyebilirsiniz" />
+
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                    
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-message">Açıklama</label>
+                        <div class="col-sm-10">
+                            <textarea id="basic-default-message"
+                                      cols="30"
+                                      rows="4"
+                                      asp-for="Description"
+                                      class="form-control"
+                                      placeholder="Açıklama ekleyebilirsiniz"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                   
+                    <div class="row justify-content-end">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Oluştur</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
