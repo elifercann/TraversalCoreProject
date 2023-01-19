@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 namespace TraversalCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Route("Admin/[controller]/[action]/{id?}")]
     public class GuideController : Controller
     {
         IGuideService _guideService;
@@ -19,17 +20,20 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
         {
             _guideService = guideService;
         }
-
+     
         public IActionResult Index()
         {
             var values = _guideService.TGetList();
             return View(values);
         }
+        
+
         [HttpGet]
         public IActionResult AddGuide()
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult AddGuide(Guide guide)
         {
@@ -50,6 +54,7 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
             }
            
         }
+
         [HttpGet]
         public IActionResult EditGuide(int id)
         {
@@ -60,15 +65,19 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
         public IActionResult EditGuide(Guide guide)
         {
             _guideService.TUpdate(guide);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Guide",new { area="Admin"});
         }
-        public IActionResult ChangeToActive(int id)
+
+        public IActionResult ChangeToTrue(int id)
         {
-            return RedirectToAction("Index");
+            _guideService.TChangeToTrueByGuide(id);
+            return RedirectToAction("Index", "Guide", new { area = "Admin" });
         }
-        public IActionResult ChangeToPassive(int id)
+
+        public IActionResult ChangeToFalse(int id)
         {
-            return RedirectToAction("Index");
+            _guideService.TChangeToFalseByGuide(id);
+            return RedirectToAction("Index", "Guide", new { area = "Admin" });
         }
     }
 }

@@ -1,0 +1,55 @@
+﻿@model MailRequest
+@{
+    ViewData["Title"] = "SendMMail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Yeni Mail Gönderme Sayfası</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Alıcı Mail Adresi</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" asp-for="ReceiverMail" id="basic-default-name" placeholder="Alıcı mail adresi bilgisini giriniz" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Konu Başlığı</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" asp-for="Subject" id="basic-default-name" placeholder="Mail konu başlığı bilgisini giriniz" />
+                        </div>
+                    </div>
+
+
+
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-message">Mail İçeriği</label>
+                        <div class="col-sm-10">
+                            <textarea id="basic-default-message"
+                                      cols="30"
+                                      rows="4"
+                                      asp-for="Body"
+                                      class="form-control"
+                                      placeholder="Açıklama ekleyebilirsiniz"></textarea>
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-end">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Gönder</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
