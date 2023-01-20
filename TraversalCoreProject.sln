@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraversalCoreProject", "TraversalCoreProject\TraversalCoreProject.csproj", "{6B15A83C-23F4-4620-85FE-992B090F1765}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraversalCoreProject", "TraversalCoreProject\TraversalCoreProject.csproj", "{6B15A83C-23F4-4620-85FE-992B090F1765}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{BE74D300-E381-4A37-B141-55E52D3C6706}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{BE74D300-E381-4A37-B141-55E52D3C6706}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{48CE8E38-D2BF-4F44-9937-BF6345140DE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{48CE8E38-D2BF-4F44-9937-BF6345140DE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{8FDDD926-3B54-45BE-8CC2-3466CEA5F952}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{8FDDD926-3B54-45BE-8CC2-3466CEA5F952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOLayer", "DTOLayer\DTOLayer.csproj", "{69A5A4F6-B667-4380-961E-CD8B088961B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8FDDD926-3B54-45BE-8CC2-3466CEA5F952}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FDDD926-3B54-45BE-8CC2-3466CEA5F952}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FDDD926-3B54-45BE-8CC2-3466CEA5F952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A5A4F6-B667-4380-961E-CD8B088961B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A5A4F6-B667-4380-961E-CD8B088961B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A5A4F6-B667-4380-961E-CD8B088961B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A5A4F6-B667-4380-961E-CD8B088961B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -55,9 +55,19 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult UpdateCity(Destination destination)
         {
+         
+            var values = _destinationService.TGetById(destination.DestinationId);
+            destination.Status = values.Status;
+            destination.Image = values.Image;
+            destination.Description = values.Description;
+            destination.Capactiy = values.Capactiy;
+            destination.CoverImage = values.CoverImage;
+            destination.Detail1 = values.Detail1;
+            destination.Detail2 = values.Detail2;
+            destination.Image2 = values.Image2;
             _destinationService.TUpdate(destination);
-            var value = JsonConvert.SerializeObject(destination);
-            return Json(value);
+            var v = JsonConvert.SerializeObject(destination);
+            return Json(v);
         }
     }
 }

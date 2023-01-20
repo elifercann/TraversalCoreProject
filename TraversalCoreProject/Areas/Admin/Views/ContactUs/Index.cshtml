@@ -1,0 +1,51 @@
+﻿@model List<ContactUs>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<div class="card">
+    <h5 class="card-header">Tur Rotaları</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Gönderen</th>
+                    <th>Konu</th>
+                    <th>Tarih</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var item in Model)
+                {
+
+
+                    <tr>
+                        @{ sayac = sayac + 1;}
+                        <td>@sayac</td>
+                        <td> <strong>@item.Name</strong></td>
+                        <td>@item.Subject</td>
+                        <td>
+                            @item.MessageDate.ToString("dd-MMM-yyyy")
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/Admin/Destination/UpdateDestination/"><i class="bx bx-edit-alt me-1"></i> Sil</a>
+                                    <a class="dropdown-item" href="/Admin/Destination/DeleteDestination/@item.ContactUsId"><i class="bx bx-trash me-1"></i> Mesajı Gör</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
