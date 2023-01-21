@@ -1,0 +1,39 @@
+﻿@model List<TraversalCoreProject.Areas.Admin.Models.AnnouncementListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<div class="card">
+    <h5 class="card-header">Duyuru Listesi</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Başlık</th>
+                    <th>İçerik</th>
+                    <th>Detaylar</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var item in Model)
+                {
+
+
+                    <tr>
+                        @{ sayac = sayac + 1;}
+                        <td>@sayac</td>
+                        <td> <strong>@item.Title</strong></td>
+                        <td>@item.Content</td>
+                        
+                        <td><a class="badge bg-label-primary me-1" href="#">Detaylar</a></td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
