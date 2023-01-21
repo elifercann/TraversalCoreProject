@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTOLayer.AppUserDTOs
+namespace DTOLayer.DTOs.AppUserDTOs
 {
     public class AppUserLoginDTOs
     {

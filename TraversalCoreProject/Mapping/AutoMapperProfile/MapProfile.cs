@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
-using DTOLayer.AnnouncementDTOs;
-using DTOLayer.AppUserDTOs;
+using DTOLayer.DTOs;
+using DTOLayer.DTOs.AnnouncementDTOs;
+using DTOLayer.DTOs.AppUserDTOs;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,16 +12,22 @@ namespace TraversalCoreProject.Mapping.AutoMapperProfile
 {
     public class MapProfile : Profile
     {
-        protected MapProfile()
+        public MapProfile()
         {
-            CreateMap<AnnouncementAddDTOs, Announcement>();
-            CreateMap<Announcement, AnnouncementAddDTOs>();
+            CreateMap<AnnouncementAddDto, Announcement>();
+            CreateMap<Announcement, AnnouncementAddDto>();
 
             CreateMap<AppUserRegisterDTOs, AppUser>();
             CreateMap<AppUser, AppUserRegisterDTOs>();
 
             CreateMap<AppUserLoginDTOs, AppUser>();
             CreateMap<AppUser, AppUserLoginDTOs>();
+
+            CreateMap<AnnouncementListDto, Announcement>();
+            CreateMap<Announcement, AnnouncementListDto>();
+
+            CreateMap<AnnouncementUpdateDto, Announcement>();
+            CreateMap<Announcement, AnnouncementUpdateDto>();
         }
     }
 }

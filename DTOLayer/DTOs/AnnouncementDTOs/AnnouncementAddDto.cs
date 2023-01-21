@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTOLayer.AnnouncementDTOs
+namespace DTOLayer.DTOs.AnnouncementDTOs
 {
-    public class AnnouncementAddDTOs
+    public class AnnouncementAddDto
     {
         public string Title { get; set; }
         public string Content { get; set; }

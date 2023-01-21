@@ -1,4 +1,4 @@
-﻿using DTOLayer.AppUserDTOs;
+﻿using DTOLayer.DTOs.AppUserDTOs;
 using FluentValidation;
 using System;
 using System.Collections.Generic;

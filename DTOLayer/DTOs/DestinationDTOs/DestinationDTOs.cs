@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTOLayer.DestinationDTOs
+namespace DTOLayer.DTOs.DestinationDTOs
 {
     public class DestinationDTOs
     {

@@ -1,4 +1,4 @@
-﻿@model List<TraversalCoreProject.Areas.Admin.Models.AnnouncementListViewModel>
+﻿@model List<DTOLayer.DTOs.AnnouncementDTOs.AnnouncementListDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -15,6 +15,8 @@
                     <th>Başlık</th>
                     <th>İçerik</th>
                     <th>Detaylar</th>
+                    <th>İşlemler</th>
+
                 </tr>
             </thead>
             <tbody class="table-border-bottom-0">
@@ -22,18 +24,35 @@
                 {
 
 
-                    <tr>
-                        @{ sayac = sayac + 1;}
-                        <td>@sayac</td>
-                        <td> <strong>@item.Title</strong></td>
-                        <td>@item.Content</td>
-                        
-                        <td><a class="badge bg-label-primary me-1" href="#">Detaylar</a></td>
-                        
-                    </tr>
+                <tr>
+                    @{ sayac = sayac + 1;}
+                    <td>@sayac</td>
+                    <td> <strong>@item.Title</strong></td>
+                    <td>@item.Content</td>
+
+                    <td><a class="badge bg-label-primary me-1" href="#">Detaylar</a></td>
+                    <td>
+                        <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/Admin/Announcement/UpdateAnnouncement/@item.AnnouncementId"><i class="bx bx-edit-alt me-1"></i> Güncelle</a>
+                                <a class="dropdown-item" href="/Admin/Announcement/DeleteAnnouncement/@item.AnnouncementId"><i class="bx bx-trash me-1"></i> Sil</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
                 }
             </tbody>
         </table>
     </div>
 </div>
+<div>
+    <br />
+    <a class="btn btn-primary" href="/Admin/Announcement/AddAnnouncement/">Yeni Duyuru Oluştur</a>
+
+</div>
+
+
 
