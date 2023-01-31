@@ -1,0 +1,82 @@
+﻿@model TraversalCoreProject.Areas.Admin.Models.VisitorViewModel
+
+@{
+    ViewData["Title"] = "UpdateVisitor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>UpdateVisitor</h1>
+
+<div class="row">
+
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0"> Ziyaretçi Güncelleme Sayfası</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <input type="hidden" asp-for="VisitorId" />
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Ad</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" asp-for="Name" id="basic-default-name" placeholder="Ziyaretçi adını giriniz" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-company">Soyad</label>
+                        <div class="col-sm-10">
+                            <input type="text"
+                                   asp-for="Surname"
+                                   class="form-control"
+                                   id="basic-default-company"
+                                   placeholder="Ziyaretçi soyadını giriniz" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-email">Mail Adresi</label>
+                        <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                                <input type="text"
+                                       asp-for="Mail"
+                                       id="basic-default-email"
+                                       class="form-control"
+                                       placeholder="Ziyaretçi mail adresini giriniz" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-email">Şehir</label>
+                        <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                                <input type="text"
+                                       asp-for="City"
+                                       id="basic-default-email"
+                                       class="form-control"
+                                       placeholder="Şehir bilgisini giriniz" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-phone">Ülke</label>
+                        <div class="col-sm-10">
+                            <input type="text"
+                                   asp-for="Country"
+                                   id="basic-default-phone"
+                                   class="form-control phone-mask"
+                                   placeholder="Ülke bilgisini giriniz" />
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-end">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-success">Güncelle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

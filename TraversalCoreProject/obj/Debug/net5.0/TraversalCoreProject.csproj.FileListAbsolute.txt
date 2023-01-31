@@ -272,3 +272,6 @@ C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\
 C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Announcement\Index.cshtml.g.cs
 C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Announcement\AddAnnouncement.cshtml.g.cs
 C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Announcement\UpdateAnnouncement.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\VisitorApi\Index.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\VisitorApi\AddVisitor.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\VisitorApi\UpdateVisitor.cshtml.g.cs
