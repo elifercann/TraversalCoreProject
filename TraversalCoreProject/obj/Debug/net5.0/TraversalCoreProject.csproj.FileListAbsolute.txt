@@ -275,3 +275,16 @@ C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\
 C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\VisitorApi\Index.cshtml.g.cs
 C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\VisitorApi\AddVisitor.cshtml.g.cs
 C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\VisitorApi\UpdateVisitor.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\ApiMovie\Index.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\BookingExchange\Index.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\BookingHotelSearch\Index.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\BookingHotelSearch\GetCityId.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\DestinationCQRS\Index.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\DestinationCQRS\GetDestination.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\DestinationCQRS\AddDestination.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net5.0\MediatR.dll
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net5.0\MediatR.Contracts.dll
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\GuideMediatR\Index.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\GuideMediatR\GetGuides.cshtml.g.cs
+C:\Users\ercan\source\repos\TraversalCoreProject\TraversalCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\GuideMediatR\AddGuide.cshtml.g.cs

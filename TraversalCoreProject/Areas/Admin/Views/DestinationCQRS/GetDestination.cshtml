@@ -1,0 +1,56 @@
+﻿@model GetDestinationByIdQueryResult
+@{
+    ViewData["Title"] = "GetDestination";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0"> Lokasyon Düzenleme Sayfası</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <input type="hidden" asp-for="destinationid" />
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Şehir</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" asp-for="city" id="basic-default-name" placeholder="Şehir ismi giriniz" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-company">Gün Gece</label>
+                        <div class="col-sm-10">
+                            <input type="text"
+                                   asp-for="daynight"
+                                   class="form-control"
+                                   id="basic-default-company"
+                                   placeholder="Gün gece bilgisini giriniz" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-email">Fiyat</label>
+                        <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                                <input type="text"
+                                       asp-for="price"
+                                       id="basic-default-email"
+                                       class="form-control"
+                                       placeholder="Fiyat bilgisini giriniz" />
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="row justify-content-end">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-success">Güncelle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

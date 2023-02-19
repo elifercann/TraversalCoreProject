@@ -1,0 +1,40 @@
+﻿@using TraversalCoreProject.Areas.Admin.Models
+@model IEnumerable<BookingExchangeViewModel.Exchange_Rates>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<div class="card">
+    <h5 class="card-header">Api IMDB 100 Film Listesi</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Kur Adı</th>
+                    <th>Kur Oranı</th>
+                 
+
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var item in Model)
+                {
+
+
+                <tr>
+                    @{sayac = sayac + 1;}
+                    <td>@sayac</td>
+                    <td>@item.currency</td>
+
+                    <td>@item.exchange_rate_buy</td>
+                    
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
