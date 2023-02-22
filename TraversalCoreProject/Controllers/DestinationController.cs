@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace TraversalCoreProject.Controllers
 {
+    [AllowAnonymous]
     public class DestinationController : Controller
     {
         DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());
@@ -18,16 +20,17 @@ namespace TraversalCoreProject.Controllers
             return View(values);
         }
         [HttpGet]
+      
         public IActionResult Details(int id)
         {
             ViewBag.i = id;
             var values = destinationManager.TGetById(id);
             return View(values);
         }
-        [HttpPost]
-        public IActionResult Details(Destination destination)
-        {
-            return View();
-        }
+        //[HttpPost]
+        //public IActionResult Details(Destination destination)
+        //{
+        //    return View();
+        //}
     }
 }
